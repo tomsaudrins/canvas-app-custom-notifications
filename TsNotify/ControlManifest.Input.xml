@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="tscomponents" constructor="TsNotify" version="1.0.7" display-name-key="TsNotify" description-key="TsNotify description" control-type="virtual" >
+    <external-service-usage enabled="false">
+    </external-service-usage>
+    <property name="messageText" display-name-key="Notification Text" description-key="Notification text for the notification" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="duration" display-name-key="Duration" description-key="Duration of the notification" of-type="Whole.None" usage="input" />
+    <property name="type" display-name-key="Type" description-key="Type of notification" of-type="Enum" usage="input" required="false">
+      <value name="Success" display-name-key="Success" description-key="Success Notification">Success</value>
+      <value name="Error" display-name-key="Error" description-key="Error Notification">Error</value>
+      <value name="Standard" display-name-key="Standard" description-key="Standard Notification">Standard</value>  
+    </property>
+    <property name="value" display-name-key="Completed GUID" description-key="Used to trigger onChange event" of-type="SingleLine.Text" usage="output" required="false" />
+    <resources>
+      <code path="index.ts" order="1"/>
+      <platform-library name="React" version="16.8.6" />
+      <platform-library name="Fluent" version="8.29.0" />
+    </resources>
+  </control>
+</manifest>
